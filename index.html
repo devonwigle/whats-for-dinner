@@ -7,26 +7,31 @@
   <body>
     <header>
       <nav>
-        <h1>What's for Dinner?</h1>
-        <button> ADD A RECIPE </button>
+        <h1>What's for Dinner? <button class="add-recipe"> ADD A RECIPE </button></h1>
       </nav>
     </header>
-    <section>
-      <form>
-        <p>What are you looking for?
-          <br />
-          <input type="radio" name=meal value="Side" checked="checked" /> Side
-          <input type="radio" name=meal value="Main Dish" checked="checked" /> Main Dish
-          <input type="radio" name=meal value="Dessert" checked="checked" /> Dessert
-          <input type="radio" name=meal value="Entire Meal" checked="checked" /> Entire meal
-          <button>LET'S COOK!</button>
-        </p>
-      </form>
-      <article>
+    <div>
+      <section class="left-box">
+        <form>
+          <p>What are you looking for?
+            <br />
+            <input type="radio" name=meal value="Side" checked="checked" /> Side
+            <p>
+            <input type="radio" name=meal value="Main Dish" checked="checked" /> Main Dish
+            <p>
+            <input type="radio" name=meal value="Dessert" checked="checked" /> Dessert
+            <p>
+            <input type="radio" name=meal value="Entire Meal" checked="checked" /> Entire meal
+            <p>
+            <button>LET'S COOK!</button>
+          </p>
+        </form>
+      </section>
+      <section class="right-box">
         <button>CLEAR</button>
         <img src="./assets/cookpot.svg" alt="Line art of boiled over cookpot with lid"
-      </article>
-    </section>
+      </section>
+    </div>
   </body>
   <script type="text/javascript" src="main.js"></script>
 </html>
