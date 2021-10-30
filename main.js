@@ -7,6 +7,7 @@ var dessertSelection = document.querySelector('#dessert');
 var selectionDisplay = document.querySelector('.selection-display')
 var selectionName = document.querySelector('.selection-name')
 var cookpot = document.querySelector('.cookpot')
+var addARecipeButton = document.querySelector('.add-recipe')
 
 // eventlisteners
 cookButton.addEventListener('click', displaySelection);
