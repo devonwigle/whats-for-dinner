@@ -1,6 +1,6 @@
 // variables
 var cookButton = document.querySelector('.cook-button');
-
+var rightBox = document.querySelector('.right-box')
 var sideSelection = document.querySelector('#side');
 var mainDishSelection = document.querySelector('#mainDish');
 var dessertSelection = document.querySelector('#entireMeal');
@@ -18,6 +18,10 @@ function chooseRecipe() {
     return getRandomIndex(desserts)
   }
 };
+
+function displaySelection() {
+  
+}
 
 function getRandomIndex(array) {
   return Math.floor(Math.random() * array.length);
