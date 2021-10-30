@@ -19,13 +19,13 @@
         <form>
           <h2>What are you looking for?</h2>
             <p>
-            <input type="radio" name=meal value="Side" checked="checked" /> Side
+            <input type="radio" name=meal value="Side" checked="checked" id="side"/> Side
             <p>
-            <input type="radio" name=meal value="Main Dish" checked="checked" /> Main Dish
+            <input type="radio" name=meal value="Main Dish" checked="checked" id="mainDish"/> Main Dish
             <p>
-            <input type="radio" name=meal value="Dessert" checked="checked" /> Dessert
+            <input type="radio" name=meal value="Dessert" checked="checked" id="dessert"/> Dessert
             <p>
-            <input type="radio" name=meal value="Entire Meal" checked="checked" /> Entire meal
+            <input type="radio" name=meal value="Entire Meal" checked="checked" id="entireMeal" /> Entire meal
             <p>
             <button class="cook-button">LET'S COOK!</button>
           </p>
@@ -33,11 +33,16 @@
       </section>
       <section class="right-box">
         <div>
+          <section class="selection-display hidden">
+            <h3>You should make:</h3>
+            <p>
+            <h1 class="selection-name"></h1>
+          </section>
           <img class="cookpot" src="./assets/cookpot.svg" alt="Line art of boiled over cookpot with lid">
         </div>
-        <!-- <div>
-          <button class="clear-button hidden">CLEAR</button>
-        </div> -->
+        <div>
+          <!-- <button class="clear-button">CLEAR</button> -->
+        </div>
       </section>
     </div>
   </body>
