@@ -20,11 +20,19 @@ function chooseRecipe() {
 };
 
 function displaySelection() {
-  
+
 }
 
 function getRandomIndex(array) {
   return Math.floor(Math.random() * array.length);
+};
+
+function show(element) {
+  element.classList.remove('hidden')
+};
+
+function hide(element) {
+  element.classList.add('hidden')
 };
 //arrays
 var sides = [
