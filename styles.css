@@ -9,6 +9,14 @@ header {
   flex-direction: row;
 }
 
+.title {
+  padding-bottom: 10px;
+  padding-top: -10px;
+}
+
+.button {
+  padding-top: 13px;
+}
 .add-recipe {
   display: right;
   border-radius: 5px;
