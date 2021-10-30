@@ -9,6 +9,19 @@ var dessertSelection = document.querySelector('#entireMeal');
 cookButton.addEventListener('click', chooseRecipe);
 // event handlers and functions
 
+function chooseRecipe() {
+  if (sideSelection.checked) {
+    return getRandomIndex(sides)
+  } else if (mainDishSelection.checked) {
+    return getRandomIndex(mains)
+  } else if (dessertSelection.checked) {
+    return getRandomIndex(desserts)
+  }
+};
+
+function getRandomIndex(array) {
+  return Math.floor(Math.random() * array.length);
+};
 //arrays
 var sides = [
   'Miso Glazed Carrots'
