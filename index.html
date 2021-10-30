@@ -3,8 +3,43 @@
     <link rel="stylesheet" href="./styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
   </head>
+
   <body>
-    
+    <header>
+      <div class="title">
+        <h1>What's for Dinner?</h1>
+      </div>
+      <div class="button">
+        <button class="add-recipe"> ADD A RECIPE </button>
+      </div>
+    </header>
+    <p>
+    <div class="boxes">
+      <section class="left-box">
+        <form>
+          <h2>What are you looking for?</h2>
+            <p>
+            <input type="radio" name=meal value="Side" checked="checked" /> Side
+            <p>
+            <input type="radio" name=meal value="Main Dish" checked="checked" /> Main Dish
+            <p>
+            <input type="radio" name=meal value="Dessert" checked="checked" /> Dessert
+            <p>
+            <input type="radio" name=meal value="Entire Meal" checked="checked" /> Entire meal
+            <p>
+            <button class="cook-button">LET'S COOK!</button>
+          </p>
+        </form>
+      </section>
+      <section class="right-box">
+        <div>
+          <img class="cookpot" src="./assets/cookpot.svg" alt="Line art of boiled over cookpot with lid">
+        </div>
+        <!-- <div>
+          <button class="clear-button hidden">CLEAR</button>
+        </div> -->
+      </section>
+    </div>
   </body>
   <script type="text/javascript" src="main.js"></script>
 </html>
