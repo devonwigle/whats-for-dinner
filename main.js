@@ -5,6 +5,7 @@ var sideSelection = document.querySelector('#side');
 var mainDishSelection = document.querySelector('#mainDish');
 var dessertSelection = document.querySelector('#entireMeal');
 var selectionDisplay = document.querySelector('.selection-display')
+var selectionName = document.querySelector('.selection-name')
 var cookpot = document.querySelector('.cookpot')
 
 // eventlisteners
@@ -23,8 +24,8 @@ function chooseRecipe() {
 
 function displaySelection() {
   event.preventDefault();
-  selectionDisplay.innerText = '';
-  selectionDisplay.innerText += `${chooseRecipe()}`
+  selectionName.innerText = '';
+  selectionName.innerText += `${chooseRecipe()}`
   show(selectionDisplay);
   hide(cookpot);
 };
