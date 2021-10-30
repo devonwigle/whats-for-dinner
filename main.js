@@ -11,6 +11,7 @@ var addARecipeButton = document.querySelector('.add-recipe')
 
 // eventlisteners
 cookButton.addEventListener('click', displaySelection);
+addARecipeButton.addEventListener('click', addRecipe);
 // event handlers and functions
 
 function chooseRecipe() {
@@ -30,6 +31,10 @@ function displaySelection() {
   show(selectionDisplay);
   hide(cookpot);
 };
+
+function addRecipe() {
+
+}
 
 function getRandomIndex(array) {
   return Math.floor(Math.random() * array.length);
