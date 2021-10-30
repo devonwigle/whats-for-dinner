@@ -4,10 +4,14 @@ var rightBox = document.querySelector('.right-box')
 var sideSelection = document.querySelector('#side');
 var mainDishSelection = document.querySelector('#mainDish');
 var dessertSelection = document.querySelector('#dessert');
-var selectionDisplay = document.querySelector('.selection-display')
-var selectionName = document.querySelector('.selection-name')
-var cookpot = document.querySelector('.cookpot')
-var addARecipeButton = document.querySelector('.add-recipe')
+var selectionDisplay = document.querySelector('.selection-display');
+var selectionName = document.querySelector('.selection-name');
+var cookpot = document.querySelector('.cookpot');
+var addARecipeButton = document.querySelector('.add-recipe');
+var addNewRecipe = document.querySelector('.addNew');
+var typeInput = document.querySelector('#type');
+var mealNameInput = document.querySelector('#name');
+var addNewButton = document.querySelector('#add-new');
 
 // eventlisteners
 cookButton.addEventListener('click', displaySelection);
