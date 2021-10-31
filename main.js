@@ -37,7 +37,7 @@ function displaySelection() {
 };
 
 function addRecipe() {
-
+  show(addNewRecipe)
 }
 
 function getRandomIndex(array) {
