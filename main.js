@@ -10,7 +10,7 @@ var selectionDisplay = document.querySelector('.selection-display');
 var selectionName = document.querySelector('.selection-name');
 var addNewRecipe = document.querySelector('.addNewRecipe');
 var recipeForm = document.querySelector('.recipe-form')
-var divRecipeForm = document.querySelector('.recipeform')
+var footer = document.querySelector('footer')
 // add new recipe inputs
 var typeInput = document.querySelector('#type');
 var mealNameInput = document.querySelector('#name');
@@ -44,7 +44,7 @@ function displaySelection() {
 };
 
 function addRecipe() {
-  show(divRecipeForm)
+  show(footer)
 }
 
 function pushRecipe() {
