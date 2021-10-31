@@ -50,14 +50,23 @@ function addRecipe() {
 function pushRecipe() {
   event.preventDefault()
   if (typeInput.value === 'side') {
-    sides.push(mealNameInput.value)
+    sides.push(mealNameInput.value);
   } else if (typeInput.value === 'main') {
     mains.push(mealNameInput.value)
   } else if (typeInput.value === 'dessert') {
     desserts.push(mealNameInput.value)
   }
+  displayNewRecipe()
   clearForm()
 }
+
+function displayNewRecipe() {
+  event.preventDefault();
+  selectionName.innerText = '';
+  selectionName.innerText += `${mealNameInput.value}`
+  show(selectionDisplay);
+  hide(cookpot);
+};
 
 function getRandomIndex(array) {
   return Math.floor(Math.random() * array.length);
