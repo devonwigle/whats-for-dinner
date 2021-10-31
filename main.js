@@ -1,21 +1,26 @@
 // variables
 var rightBox = document.querySelector('.right-box')
+var cookpot = document.querySelector('.cookpot');
+//Selections radio buttons
 var sideSelection = document.querySelector('#side');
 var mainDishSelection = document.querySelector('#mainDish');
 var dessertSelection = document.querySelector('#dessert');
+//sections
 var selectionDisplay = document.querySelector('.selection-display');
 var selectionName = document.querySelector('.selection-name');
-var cookpot = document.querySelector('.cookpot');
+var addNewRecipe = document.querySelector('.addNewRecipe');
+// add new recipe inputs
 var typeInput = document.querySelector('#type');
 var mealNameInput = document.querySelector('#name');
+// buttons
 var cookButton = document.querySelector('.cook-button');
-var addNewRecipe = document.querySelector('.addNewRecipe');
 var addARecipeButton = document.querySelector('.add-recipe');
 var addNewButton = document.querySelector('#add-new');
 
 // eventlisteners
 cookButton.addEventListener('click', displaySelection);
 addARecipeButton.addEventListener('click', addRecipe);
+addNewButton.addEventListener('click', pushRecipe)
 // event handlers and functions
 
 function chooseRecipe() {
@@ -38,6 +43,16 @@ function displaySelection() {
 
 function addRecipe() {
   show(addNewRecipe)
+}
+
+function pushRecipe() {
+  if (typeInput.value == side || sides) {
+    sides.push(mealNameInput.value)
+  } else if (typeInput.value == main || mains) {
+    mains.push(mealNameInput.value)
+  } else if (typeInput.value == dessert || desserts) {
+    desserts.push(mealNameInput.value)
+  }
 }
 
 function getRandomIndex(array) {
