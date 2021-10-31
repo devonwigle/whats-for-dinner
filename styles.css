@@ -11,11 +11,12 @@ header {
 
 .title {
   padding-bottom: 10px;
-  padding-top: -10px;
+  padding-top: 10px;
 }
 
 .button {
-  padding-top: 13px;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 .add-recipe {
   display: right;
