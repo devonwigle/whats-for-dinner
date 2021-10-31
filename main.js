@@ -58,8 +58,10 @@ function pushRecipe() {
     desserts.push(mealNameInput.value)
   } else {
     errorMessage.innerText = `Sorry, ${typeInput.value} is not an allowed type. Please choose side, main, or dessert.`
+    clearForm()
     return
   }
+  hide(errorMessage)
   displayNewRecipe()
   clearForm()
 }
