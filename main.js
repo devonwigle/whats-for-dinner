@@ -10,6 +10,7 @@ var selectionDisplay = document.querySelector('.selection-display');
 var selectionName = document.querySelector('.selection-name');
 var addNewRecipe = document.querySelector('.addNewRecipe');
 var recipeForm = document.querySelector('.recipe-form')
+var divRecipeForm = document.querySelector('.recipeform')
 // add new recipe inputs
 var typeInput = document.querySelector('#type');
 var mealNameInput = document.querySelector('#name');
@@ -43,18 +44,19 @@ function displaySelection() {
 };
 
 function addRecipe() {
-  show(addNewRecipe)
+  show(divRecipeForm)
 }
 
 function pushRecipe() {
   event.preventDefault()
-  if (typeInput.value == 'side' || 'sides') {
+  if (typeInput.value === 'side') {
     sides.push(mealNameInput.value)
-  } else if (typeInput.value == 'main' || 'mains') {
+  } else if (typeInput.value === 'main') {
     mains.push(mealNameInput.value)
-  } else if (typeInput.value == 'dessert' || 'desserts') {
+  } else if (typeInput.value === 'dessert') {
     desserts.push(mealNameInput.value)
   }
+  clearForm()
 }
 
 function getRandomIndex(array) {
@@ -68,6 +70,11 @@ function show(element) {
 function hide(element) {
   element.classList.add('hidden')
 };
+
+function clearForm() {
+  typeInput.value = '';
+  mealNameInput.value = '';
+}
 //arrays
 var sides = [
   'Miso Glazed Carrots',
@@ -83,7 +90,7 @@ var sides = [
 ];
 
 var mains = [
-  'paghetti and Meatballs',
+  'Spaghetti and Meatballs',
   'Pineapple Chicken',
   'Shakshuka',
   'Thai Yellow Curry',
