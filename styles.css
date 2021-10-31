@@ -42,7 +42,8 @@ body {
   display: flex;
   margin-top: 60px;
   margin-bottom: 280px;
-
+  height: 300px;
+  width: 150%;
 }
 
 .left-box {
@@ -79,12 +80,17 @@ body {
   padding-top: 70px;
 }
 
+h3 {
+  font-style: italic;
+  text-align: center;
+}
+
 .cookpot {
   position: relative;
   left: 40%;
   width: 35%;
   height: auto;
-  margin-top: 50px;
+  margin-top: 30px;
 }
 
 .addNewRecipe {
