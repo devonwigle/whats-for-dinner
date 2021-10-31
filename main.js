@@ -9,6 +9,7 @@ var dessertSelection = document.querySelector('#dessert');
 var selectionDisplay = document.querySelector('.selection-display');
 var selectionName = document.querySelector('.selection-name');
 var addNewRecipe = document.querySelector('.addNewRecipe');
+var recipeForm = document.querySelector('.recipe-form')
 // add new recipe inputs
 var typeInput = document.querySelector('#type');
 var mealNameInput = document.querySelector('#name');
