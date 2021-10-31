@@ -78,11 +78,16 @@ body {
   padding-right: 80px;
   padding-bottom: 70px;
   padding-top: 70px;
+  width: 300px;
 }
 
 h3 {
   font-style: italic;
   text-align: center;
+}
+
+.selection-name {
+  text-align: center
 }
 
 .cookpot {
