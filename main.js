@@ -24,8 +24,8 @@ var addNewButton = document.querySelector('#add-new');
 cookButton.addEventListener('click', displaySelection);
 addARecipeButton.addEventListener('click', addRecipe);
 addNewButton.addEventListener('click', pushRecipe)
-// event handlers and functions
 
+// event handlers and functions
 function chooseRecipe() {
   if (sideSelection.checked) {
     return sides[getRandomIndex(sides)]
@@ -57,8 +57,7 @@ function pushRecipe() {
   } else if (typeInput.value === 'dessert') {
     desserts.push(mealNameInput.value)
   } else {
-    errorMessage.innerText = `Sorry, ${typeInput.value} is not an allowed type. Please choose side, main, or dessert.`
-    clearForm()
+    showError()
     return
   }
   hide(errorMessage)
@@ -77,6 +76,11 @@ function displayNewRecipe() {
 function getRandomIndex(array) {
   return Math.floor(Math.random() * array.length);
 };
+
+function showError() {
+  errorMessage.innerText = `Sorry, ${typeInput.value} is not an allowed type. Please choose side, main, or dessert.`
+  clearForm()
+}
 
 function show(element) {
   element.classList.remove('hidden')
