@@ -16,6 +16,7 @@ header {
 
 .button {
   padding-top: 13px;
+  padding-bottom: 13px;
 }
 .add-recipe {
   display: right;
