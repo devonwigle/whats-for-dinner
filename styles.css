@@ -101,10 +101,19 @@ body {
   padding-left: 12px;
 }
 
+#type {
+  height: 25px;
+}
+
+#name {
+  height: 25px;
+}
+
 #add-new {
   border: none;
   background-color: #0fb9b1;
   border-radius: 5px;
+  height: 25px;
 
 }
 /* .clear-button {
