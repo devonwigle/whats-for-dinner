@@ -1,15 +1,29 @@
 // variables
-var cookButton = document.querySelector('.cook-button');
 var rightBox = document.querySelector('.right-box')
+var cookpot = document.querySelector('.cookpot');
+//Selections radio buttons
 var sideSelection = document.querySelector('#side');
 var mainDishSelection = document.querySelector('#mainDish');
 var dessertSelection = document.querySelector('#dessert');
-var selectionDisplay = document.querySelector('.selection-display')
-var selectionName = document.querySelector('.selection-name')
-var cookpot = document.querySelector('.cookpot')
+//sections
+var selectionDisplay = document.querySelector('.selection-display');
+var selectionName = document.querySelector('.selection-name');
+var addNewRecipe = document.querySelector('.addNewRecipe');
+var recipeForm = document.querySelector('.recipe-form')
+var footer = document.querySelector('footer')
+var errorMessage = document.querySelector('.error-message')
+// add new recipe inputs
+var typeInput = document.querySelector('#type');
+var mealNameInput = document.querySelector('#name');
+// buttons
+var cookButton = document.querySelector('.cook-button');
+var addARecipeButton = document.querySelector('.add-recipe');
+var addNewButton = document.querySelector('#add-new');
 
 // eventlisteners
 cookButton.addEventListener('click', displaySelection);
+addARecipeButton.addEventListener('click', addRecipe);
+addNewButton.addEventListener('click', pushRecipe)
 // event handlers and functions
 
 function chooseRecipe() {
@@ -30,6 +44,36 @@ function displaySelection() {
   hide(cookpot);
 };
 
+function addRecipe() {
+  show(footer)
+}
+
+function pushRecipe() {
+  event.preventDefault()
+  if (typeInput.value === 'side') {
+    sides.push(mealNameInput.value);
+  } else if (typeInput.value === 'main') {
+    mains.push(mealNameInput.value)
+  } else if (typeInput.value === 'dessert') {
+    desserts.push(mealNameInput.value)
+  } else {
+    errorMessage.innerText = `Sorry, ${typeInput.value} is not an allowed type. Please choose side, main, or dessert.`
+    clearForm()
+    return
+  }
+  hide(errorMessage)
+  displayNewRecipe()
+  clearForm()
+}
+
+function displayNewRecipe() {
+  event.preventDefault();
+  selectionName.innerText = '';
+  selectionName.innerText += `${mealNameInput.value}`
+  show(selectionDisplay);
+  hide(cookpot);
+};
+
 function getRandomIndex(array) {
   return Math.floor(Math.random() * array.length);
 };
@@ -41,6 +85,11 @@ function show(element) {
 function hide(element) {
   element.classList.add('hidden')
 };
+
+function clearForm() {
+  typeInput.value = '';
+  mealNameInput.value = '';
+}
 //arrays
 var sides = [
   'Miso Glazed Carrots',
@@ -56,7 +105,7 @@ var sides = [
 ];
 
 var mains = [
-  'paghetti and Meatballs',
+  'Spaghetti and Meatballs',
   'Pineapple Chicken',
   'Shakshuka',
   'Thai Yellow Curry',
