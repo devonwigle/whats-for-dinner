@@ -2,22 +2,55 @@
 
 ## Overview
 
-What's for dinner? The ultimate question. You will be building an app that helps users choose a recipe and put together meals. 
-
-This Solo Challenge gives students and instructors the opportunity to get a pulse on where you are with the foundational concepts of Module 1 curriculum. Students should use this as an opportunity to challenge themselves and work completely independently. Google can (and probably should!) be used, but any other code base should not be referenced. Instructors will be able to use your work, both completion of functionality and code quality, to determine where you stand and if you are behind for this point in the module, provide supports to intervene.
-
-The spec for this project can be found [here](https://frontend.turing.io/projects/module-1/dinner.html). 
-
-## Learning Goals
-
-- Gain experience building an application that utilizes HTML, CSS and JavaScript
-- Write HTML and CSS to match a provided comp
-- Understand how to listen to and respond to user events
-- Individualize your programming skill set
+What's for dinner? The ultimate question. You will be building an app that helps users choose a recipe and put together meals.
 
 ## Setup
 
+- If you want to play with the code follow this guide, otherwise go to instructions for use.
 - Fork this project to your own Github account
 - Clone the repository to your local machine
 - `cd` into the project
-- Read this README thoroughly, then begin working!
+- Open in your text editor
+  - use open index.html, to view a working model of the webpage.
+- Read this README thoroughly.
+
+## Instructions for use
+
+If you want to play with my website, it can be found [here](https://devonwigle.github.io/whats-for-dinner/)
+
+You start on the main page where you can:
+![Main Page](https://user-images.githubusercontent.com/88619501/139602251-f9be5cdf-9052-4096-9766-be861a645698.png)
+
+* Click on any of the radio buttons then LET'S COOK to be shown a recipe selection.
+This will populate where the cookpot currently resides.
+* Click on ADD A RECIPE button
+
+![Add Recipe form](https://user-images.githubusercontent.com/88619501/139602652-9a3b59af-bac2-4597-8622-a72be8041ff4.png)
+At the bottom of the page you can write type (side, main, or dessert) and a recipe name.
+This will then populate in the you should make section.
+
+## Contributor
+Turing School of Software & Design Frontend Student
+
+Devon Wigle
+
+## Technologies used
+* Atom
+* Terminal
+* github
+* Chrome
+* Languages
+  * HTML
+  * CSS
+  * JavaScript
+
+## Planned Additions
+* Entire meal functionality
+* Error handling and clear button
+* Login page
+* user can favorite recipes
+* user can delete a recipe
+* User never sees a repeated recipe
+* All recipes interface
+* Local storage
+* Fancy intermediate CSS
