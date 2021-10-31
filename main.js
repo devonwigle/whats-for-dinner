@@ -11,6 +11,7 @@ var selectionName = document.querySelector('.selection-name');
 var addNewRecipe = document.querySelector('.addNewRecipe');
 var recipeForm = document.querySelector('.recipe-form')
 var footer = document.querySelector('footer')
+var errorMessage = document.querySelector('.error-message')
 // add new recipe inputs
 var typeInput = document.querySelector('#type');
 var mealNameInput = document.querySelector('#name');
@@ -55,6 +56,9 @@ function pushRecipe() {
     mains.push(mealNameInput.value)
   } else if (typeInput.value === 'dessert') {
     desserts.push(mealNameInput.value)
+  } else {
+    errorMessage.innerText = `Sorry, ${typeInput.value} is not an allowed type. Please choose side, main, or dessert.`
+    return
   }
   displayNewRecipe()
   clearForm()
