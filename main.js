@@ -47,11 +47,12 @@ function addRecipe() {
 }
 
 function pushRecipe() {
-  if (typeInput.value == side || sides) {
+  event.preventDefault()
+  if (typeInput.value == 'side' || 'sides') {
     sides.push(mealNameInput.value)
-  } else if (typeInput.value == main || mains) {
+  } else if (typeInput.value == 'main' || 'mains') {
     mains.push(mealNameInput.value)
-  } else if (typeInput.value == dessert || desserts) {
+  } else if (typeInput.value == 'dessert' || 'desserts') {
     desserts.push(mealNameInput.value)
   }
 }
