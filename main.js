@@ -57,15 +57,17 @@ function pushRecipe() {
   } else if (typeInput.value === 'dessert') {
     desserts.push(mealNameInput.value)
   } else {
-    errorMessage.innerText = `Sorry, ${typeInput.value} is not an allowed type. Please choose side, main, or dessert.`
-    clearForm()
+    showError()
     return
   }
   hide(errorMessage)
   displayNewRecipe()
   clearForm()
 }
-
+function showError() {
+  errorMessage.innerText = `Sorry, ${typeInput.value} is not an allowed type. Please choose side, main, or dessert.`
+  clearForm()
+}
 function displayNewRecipe() {
   event.preventDefault();
   selectionName.innerText = '';
